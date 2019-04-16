@@ -13,7 +13,7 @@
     </div>
     <pre>State: {{toggled}}</pre>
     <section class="grid-container">
-      <div v-for="card in cards">
+      <div v-for="card in cards" :key="card.id + 'id'">
         <BaseCard :toggled="toggled" :card="card"/>
       </div>
     </section>
@@ -22,54 +22,15 @@
 
 <script>
 // @ is an alias to /src
-// import HelloWorld from "@/components/HelloWorld.vue";
+import globalMeta from "../data/globalMeta.js";
 
 export default {
   name: "home",
   data() {
+    console.log(globalMeta.cards)
     return {
       toggled: false,
-      cards: [
-        {
-          name: "Red Jacket",
-          memory:
-            "This was a jacket given to me by my lovely aunt who loves overseas in Tokyo. I fondly remember the time she visited the States.",
-          src: "https://source.unsplash.com/random/200x300"
-        },
-        {
-          name: "White Shirt",
-          memory:
-            "I proposed to my wife wearing this t-shirt. I still remember the day like it was yesterday. We have been married for 80 years and things are pretty good. I hope to be married another 80 years"
-        },
-        {
-          name: "Beige Pants",
-          memory: "My ex-boyfriend left these pants at my apartment."
-        },
-        {
-          name: "Gray T-shirt",
-          memory:
-            "This is my uniform shirt for my part-time job at Starbucks. A lot of free coffee, friendly people but also hard work and long hours."
-        },
-        {
-          name: "Graphic T-shirt",
-          memory:
-            "I got this shirt for free at this super dope film festival in Amsterdam. "
-        },
-        {
-          name: "Black Pants",
-          memory: "My mom bought be these pants and I never wear them."
-        },
-        {
-          name: "Green Pants",
-          memory:
-            "When I was in high school, I bought this pair of pants with my mother. "
-        },
-        {
-          name: "Yellow T-Shirt",
-          memory:
-            "This was my free dorm room shirt. I remember that day was blazingly hot but I was excited at my new college adventure."
-        }
-      ]
+      cards: globalMeta.cards, 
     };
   }
 };
