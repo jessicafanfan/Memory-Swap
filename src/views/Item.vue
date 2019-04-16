@@ -13,7 +13,7 @@ import globalMeta from '../data/globalMeta.js'
 
 export default {
   data() {
-    console.log(globalMeta.cards[this.$route.params.id])
+    // console.log(globalMeta.cards[this.$route.params.id])
     return {
       itemMeta: globalMeta.cards[this.$route.params.id]
     }
