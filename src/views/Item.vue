@@ -9,11 +9,7 @@
         <h3 class="item-memory">{{itemMeta.memory}}</h3>
       </div>
     </section>
-<<<<<<< HEAD
-    <PurchaseForm :id="itemMeta.id"/>
-=======
     <PurchaseForm :index="itemIndex" :itemMeta="itemMeta" />
->>>>>>> 1a951868f75133aea58246821470c3d55416d4dc
   </div>
 </template>
 
