@@ -1,6 +1,6 @@
 <template>
   <div class="card-wrapper">
-    <router-link :to="`/item/${card.id}`">
+    <router-link :to="`/item/${index}`">
       <div v-show="toggled" class="item-wrapper">
         <div class="item-name">{{ card.name }}</div>
         <div class="item-memory">{{ card.memory }}</div>
@@ -22,11 +22,12 @@ export default {
   name: "BaseCard",
   props: {
     card: Object,
-    toggled: Boolean
+    toggled: Boolean,
+    index: Number, 
   },
   data() {
     return {
-      imageSrc: require(`@/assets/clothes/item-${this.card.id}-small.jpg`)
+      imageSrc: require(`@/assets/clothes/item-${this.index}-small.jpg`)
       // imageSrc: this.card.src
     };
   }
@@ -34,12 +35,22 @@ export default {
 </script>
 
 <style scoped>
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 .card-wrapper {
   border: 1px rgba(16, 16, 16, 0.2) solid;
   border-radius: 0.5rem;
   text-align: center;
   position: relative;
   height: 30vw;
+  overflow: hidden;
+}
+.card-wrapper:hover .item-wrapper .item-image {
+  transform: scale(1.06)
 }
 .item-wrapper {
   box-sizing: border-box;
@@ -48,9 +59,12 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 15rem 4rem;
+  /* padding: 15rem 4rem; */
+  padding: 10px;
+  padding-top: 20px;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: scroll;
 }
 .item-name {
   font-family: "Adieu";
@@ -64,10 +78,12 @@ export default {
   line-height: 2rem;
 }
 .item-image {
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
-  top: 0;
+  top: 25px;
   left: 0;
+  transform-origin: 50% 0;
+  transition: transform 333ms ease;
 }
 .btn-wrapper {
   position: absolute;

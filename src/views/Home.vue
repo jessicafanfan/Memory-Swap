@@ -13,28 +13,30 @@
     </div>
     <pre>State: {{toggled}}</pre>
     <section class="grid-container">
-      <div v-for="card in cards" :key="card.id + 'id'">
-        <BaseCard :toggled="toggled" :card="card"/>
+      <div v-for="(card, index) in cards" :key="index + 'id'">
+        <BaseCard :toggled="toggled" :card="card" :index="index"/>
       </div>
     </section>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import globalMeta from "../data/globalMeta.js";
 
 export default {
   name: "home",
+  props: {
+    meta: Object,
+  },
   data() {
-    console.log(globalMeta.cards)
+    // console.log(this.meta.cards)
     return {
       toggled: false,
-      cards: globalMeta.cards, 
+      cards: this.meta.cards, 
     };
-  }
+  },
 };
 </script>
+
 <style scoped>
 .grid-container {
   margin: 14vw 5rem 10vw 5rem;
