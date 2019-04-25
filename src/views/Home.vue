@@ -11,7 +11,7 @@
       />
       <div class="switch-memory">Memory</div>
     </div>
-    <pre>State: {{toggled}}</pre>
+    <!-- <pre>State: {{toggled}}</pre> -->
     <section class="grid-container">
       <div v-for="(card, index) in cards" :key="index + 'id'">
         <BaseCard :toggled="toggled" :card="card" :index="index"/>

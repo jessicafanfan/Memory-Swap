@@ -5,7 +5,7 @@
       <br>Swap
     </router-link>
     <nav>
-      <router-link to="/cart">Cart</router-link>
+      <!-- <router-link to="/cart">Cart</router-link> -->
       <router-link to="/about">About</router-link>
     </nav>
     <router-view :meta="meta"/>
