@@ -38,7 +38,7 @@ export default {
         subject = `Requesting ${this.itemMeta.name}, Item #${this.index}`,
         body = 
 `Hi, my name is ${this.name || '[name]'} requesting the ${this.itemMeta.name}. I want to give this memory another life!
-When the item is ready for pickup, please contact me at ${this.contact || '[email]'}
+When the item is ready for pickup, please contact me at ${this.email || '[email]'}
 
 This is item #${this.index}.
 `; 
