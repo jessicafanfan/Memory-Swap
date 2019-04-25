@@ -6,7 +6,7 @@
         <div class="item-memory">{{ card.memory }}</div>
       </div>
       <div v-show="!toggled" class="item-wrapper">
-        <img :src="imageSrc">
+        <img class="item-image" :src="imageSrc">
       </div>
 
       <div class="btn-wrapper">
@@ -26,7 +26,8 @@ export default {
   },
   data() {
     return {
-      imageSrc: this.card.src
+      imageSrc: require(`@/assets/clothes/item-${this.card.id}-small.jpg`)
+      // imageSrc: this.card.src
     };
   }
 };
@@ -61,6 +62,12 @@ export default {
 .item-memory {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+.item-image {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 .btn-wrapper {
   position: absolute;
