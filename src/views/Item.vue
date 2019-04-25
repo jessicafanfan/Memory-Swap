@@ -5,7 +5,7 @@
       <img :src="itemSrc" />
       <h3>{{itemMeta.memory}}</h3>
     </section>
-    <PurchaseForm :id="itemMeta.id" />
+    <PurchaseForm :index="itemIndex" :itemMeta="itemMeta" />
   </div>
 </template>
 
@@ -24,6 +24,7 @@ export default {
   data() {
     return {
       itemMeta: this.meta.cards[this.$route.params.id],
+      itemIndex: this.$route.params.id,
       itemSrc: require(`@/assets/clothes/item-${this.$route.params.id}-big.jpg`)
     };
   }

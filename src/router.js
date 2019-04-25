@@ -19,10 +19,15 @@ export default new Router({
       name: "about",
       component: () => import("./views/About.vue")
     },
+    // {
+    //   path: "/cart",
+    //   name: "cart",
+    //   component: () => import("./views/Cart.vue")
+    // },
     {
-      path: "/cart",
-      name: "cart",
-      component: () => import("./views/Cart.vue")
+      path: "/panel",
+      name: "panel",
+      component: () => import("./views/Panel.vue")
     },
     {
       path: "/item/:id",
