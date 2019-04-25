@@ -1,17 +1,19 @@
 <template>
   <div class="card-wrapper">
-    <div v-show="toggled" class="item-wrapper">
-      <div class="item-name">{{ card.name }}</div>
-      <div class="item-memory">{{ card.memory }}</div>
-    </div>
-    <div v-show="!toggled" class="item-wrapper">
-      <img :src="imageSrc">
-    </div>
+    <router-link :to="`/item/${card.id}`">
+      <div v-show="toggled" class="item-wrapper">
+        <div class="item-name">{{ card.name }}</div>
+        <div class="item-memory">{{ card.memory }}</div>
+      </div>
+      <div v-show="!toggled" class="item-wrapper">
+        <img :src="imageSrc">
+      </div>
 
-    <div class="btn-wrapper">
-      <button class="b-learn-more">Learn More</button>
-      <button class="b-reserve">Reserve</button>
-    </div>
+      <div class="btn-wrapper">
+        <button class="b-learn-more">Learn More</button>
+        <button class="b-reserve">Reserve</button>
+      </div>
+    </router-link>
   </div>
 </template>
 
