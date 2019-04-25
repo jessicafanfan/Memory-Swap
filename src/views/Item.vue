@@ -7,9 +7,9 @@
       <div class="infoBlock">
         <h1 class="item-title">{{itemMeta.name}}</h1>
         <h3 class="item-memory">{{itemMeta.memory}}</h3>
+        <PurchaseForm :index="itemIndex" :itemMeta="itemMeta"/>
       </div>
     </section>
-    <PurchaseForm :index="itemIndex" :itemMeta="itemMeta"/>
   </div>
 </template>
 
@@ -73,5 +73,7 @@ export default {
 .item-memory {
   font-family: "eh";
   font-weight: 400;
+  padding-bottom: 6rem;
+  border-bottom: 1px gainsboro solid;
 }
 </style>
