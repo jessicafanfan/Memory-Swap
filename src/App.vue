@@ -21,7 +21,7 @@ export default {
   name: "app",
   data() {
     return {
-      fbData: [], 
+      // fbData: [], 
       meta: globalMeta,
     }
   },
@@ -76,6 +76,7 @@ button {
   position: fixed;
   top: 5rem;
   left: 5rem;
+  z-index: 50;
 }
 .switch-wrapper {
   position: fixed;
@@ -90,6 +91,7 @@ button {
   justify-content: space-evenly;
   text-transform: uppercase;
   letter-spacing: 0.04rem;
+  z-index: 50;
 }
 .switch-clothing {
   padding-right: 2rem;
@@ -108,6 +110,7 @@ nav {
   position: fixed;
   top: 5rem;
   right: 5rem;
+  z-index: 50;
 }
 nav a.router-link-exact-active {
   color: #7373a7;
