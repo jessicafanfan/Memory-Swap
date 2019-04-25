@@ -1,6 +1,6 @@
 <template>
   <div class="panel">
-    <section class="firebase-cards">
+    <!-- <section class="firebase-cards">
       <h3 class='section-header'>Firebase Stored Clothing Items</h3>
       <div class="grid-container">
         <PanelCard v-for="card in cards" :key="card.id + 'id'" :card="card"/>
@@ -8,36 +8,36 @@
     </section>
     <section class="edit-form">
       
-    </section>
+    </section> -->
   </div>
 </template>
 
 <script>
-import FirebaseController from '@/controllers/FirebaseController.js';
-import PanelCard from '@/components/PanelCard.vue';
-const firebaseController = new FirebaseController();
+// import FirebaseController from '@/controllers/FirebaseController.js';
+// import PanelCard from '@/components/PanelCard.vue';
+// const firebaseController = new FirebaseController();
 
-export default {
-  name: "panel",
-  props: {
-    meta: Object,
-  },
-  components: {
-    PanelCard,
-  },
-  data() {
-    return {
-      toggled: false,
-      cards: [], 
-    };
-  },
-  created() {
-    let vueApp = this; 
-    firebaseController.getAllClothesData(querySnapshot => {
-      querySnapshot.forEach((doc) => {vueApp.cards.push(doc.data())});
-    }); 
-  }
-};
+// export default {
+//   name: "panel",
+//   props: {
+//     meta: Object,
+//   },
+//   components: {
+//     PanelCard,
+//   },
+//   data() {
+//     return {
+//       toggled: false,
+//       cards: [], 
+//     };
+//   },
+//   created() {
+//     let vueApp = this; 
+//     firebaseController.getAllClothesData(querySnapshot => {
+//       querySnapshot.forEach((doc) => {vueApp.cards.push(doc.data())});
+//     }); 
+//   }
+// };
 </script>
 
 <style scoped>
