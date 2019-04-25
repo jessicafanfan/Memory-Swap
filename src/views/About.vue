@@ -3,7 +3,7 @@
     <div class="title-wrapper">
       <h1 class="title">
         <span class="blue">How</span> to:
-        <br>Memory Swap
+        <br>Memory Swapp
       </h1>
       <p
         class="body-text"
