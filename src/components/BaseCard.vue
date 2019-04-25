@@ -1,11 +1,11 @@
 <template>
   <div class="card-wrapper">
     <router-link :to="`/item/${index}`">
-      <div v-show="toggled" class="item-wrapper">
+      <div :class="{visible: toggled, 'item-wrapper': true}">
         <div class="item-name">{{ card.name }}</div>
         <div class="item-memory">{{ card.memory }}</div>
       </div>
-      <div v-show="!toggled" class="item-wrapper">
+      <div :class="{visible: !toggled, 'item-wrapper': true}">
         <img class="item-image" :src="imageSrc">
       </div>
 
@@ -65,7 +65,16 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: scroll;
+  position: absolute;
+  transition: opacity 222ms ease-in; 
+  opacity: 0.1;
+  z-index: 0;
 }
+.item-wrapper.visible {
+  opacity: 1;
+  z-index: 10;
+}
+
 .item-name {
   font-family: "Adieu";
   font-size: 1.8rem;
