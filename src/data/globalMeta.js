@@ -2,58 +2,56 @@
 export default {
   cards: [
     {
-      name: "Red Jacket",
+      name: "Waldo T-Shirt",
       memory:
-        "This was a jacket given to me by my lovely aunt who loves overseas in Tokyo. I fondly remember the time she visited the States.",
+        "My ex and I both bought these to wear to a pirate themed bar crawl, but everyone thought we looked like Where’s Waldo.",
       // src: "item-1",
-      id: '1'
     },
     {
-      name: "White Shirt",
+      name: "Waldo T-Shirt",
       memory:
-        "I proposed to my wife wearing this t-shirt. I still remember the day like it was yesterday. We have been married for 80 years and things are pretty good. I hope to be married another 80 years",
+        "My ex and I both bought these to wear to a pirate themed bar crawl, but everyone thought we looked like Where’s Waldo.",
       // src: "https://source.unsplash.com/random/200x300",
-      id: '2'
     },
     {
-      name: "Beige Pants",
-      memory: "My ex-boyfriend left these pants at my apartment.",
+      name: "Totoro Shirt",
+      memory: "",
       // src: "https://source.unsplash.com/random/200x300",
-      id: '3'
     },
     {
-      name: "Gray T-shirt",
+      name: "Earthquakes Scarf",
       memory:
-        "This is my uniform shirt for my part-time job at Starbucks. A lot of free coffee, friendly people but also hard work and long hours.",
+        "",
       // src: "https://source.unsplash.com/random/200x300",
-      id: '4'
     },
     {
-      name: "Graphic T-shirt",
+      name: "I’m In Training Don’t Kiss me",
       memory:
-        "I got this shirt for free at this super dope film festival in Amsterdam. ",
+        "I wore this shirt to an art school halloween party in reference to a 1920s surrealist artist named Claude Cahun whose work used photography to explore gender ambiguity. Nobody at the party got the reference, and as a result I only wore the shirt one other time, when my professor Chrissi Cowhey caught the reference and made making it entirely worthwhile.",
       // src: "https://source.unsplash.com/random/200x300",
-      id: '5'
     },
     {
-      name: "Black Pants",
-      memory: "My mom bought be these pants and I never wear them.",
+      name: "Pink Bralette",
+      memory: "This bra was with some stuff my ex gave back to me 6 months after we broke up, but it wasn’t my bra",
       // src: "https://source.unsplash.com/random/200x300",
-      id: '6'
     },
     {
-      name: "Green Pants",
+      name: "Robin T-Shirt",
       memory:
-        "When I was in high school, I bought this pair of pants with my mother. ",
+        "I got the shirt at Christmas from an Aunt and while I never wore it I love that it makes me feel like an important side kick (Robin)!",
       // src: "https://source.unsplash.com/random/200x300",
-      id: '7'
     },
     {
       name: "Yellow T-Shirt",
       memory:
         "This was my free dorm room shirt. I remember that day was blazingly hot but I was excited at my new college adventure.",
       // src: "https://source.unsplash.com/random/200x300",
-      id: '8'
+    },
+    {
+      name: "Yellow T-Shirt",
+      memory:
+        "This was my free dorm room shirt. I remember that day was blazingly hot but I was excited at my new college adventure.",
+      // src: "https://source.unsplash.com/random/200x300",
     }
   ]
 }
