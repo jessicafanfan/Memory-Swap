@@ -10,8 +10,7 @@
       </div>
 
       <div class="btn-wrapper">
-        <button class="b-learn-more">Learn More / Reserve</button>
-        <!-- <button class="b-reserve">Reserve</button> -->
+        <button class="b-learn-more">Learn More</button>
       </div>
     </router-link>
   </div>
@@ -23,7 +22,7 @@ export default {
   props: {
     card: Object,
     toggled: Boolean,
-    index: Number, 
+    index: Number
   },
   data() {
     return {
@@ -50,7 +49,7 @@ export default {
   overflow: hidden;
 }
 .card-wrapper:hover .item-wrapper .item-image {
-  transform: scale(1.06)
+  transform: scale(1.06);
 }
 .item-wrapper {
   box-sizing: border-box;
@@ -59,15 +58,15 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* padding: 15rem 4rem; */
+  justify-content: center;
   padding: 5px;
   padding-top: 25px;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: scroll;
   position: absolute;
-  transition: opacity 222ms ease-in; 
-  opacity: 0.1;
+  transition: opacity 222ms ease-in;
+  opacity: 0;
   z-index: 0;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -91,11 +90,9 @@ export default {
   padding: 0 10px;
 }
 .item-image {
-  /* position: absolute; */
   width: 100%;
-  /* top: 25px; */
-  /* left: 0; */
-  transform-origin: 50% 0;
+  margin-top: 1vw;
+  /* transform-origin: 50% 0; */
   transition: transform 333ms ease;
 }
 .btn-wrapper {
@@ -103,7 +100,7 @@ export default {
   height: 10%;
   bottom: 5%;
   left: 50%;
-  transform: translateX(-50%); 
+  transform: translateX(-50%);
   /* width: 50%; */
   display: flex;
   flex-direction: row;
