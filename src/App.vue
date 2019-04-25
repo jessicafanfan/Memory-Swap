@@ -8,13 +8,30 @@
       <router-link to="/cart">Cart</router-link>
       <router-link to="/about">About</router-link>
     </nav>
-    <router-view/>
+    <router-view :meta="meta"/>
   </div>
 </template>
 
 <script>
+import globalMeta from './data/globalMeta.js';
+// import FirebaseController from './controllers/FirebaseController.js';
+// const firebaseController = new FirebaseController();
+
 export default {
-  name: "app"
+  name: "app",
+  data() {
+    return {
+      fbData: [], 
+      meta: globalMeta,
+    }
+  },
+  // created() {
+  //   let vueApp = this; 
+  //   firebaseController.getAllClothesData(querySnapshot => {
+  //     // this.clothesMeta = data; console.log(data)
+  //     querySnapshot.forEach((doc) => {vueApp.fbData.push(doc.data())});
+  //   }); 
+  // }
 };
 </script>
 
