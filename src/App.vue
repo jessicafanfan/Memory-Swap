@@ -110,6 +110,6 @@ nav {
   right: 5rem;
 }
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: #7373a7;
 }
 </style>
