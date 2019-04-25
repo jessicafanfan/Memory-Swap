@@ -15,7 +15,7 @@
       <input type='text'>Your Name</input>
       <button type='submit'>Submit</button>
     </form> -->
-    <a :href="this.mailto">Request To Reserve</a>
+    <a :href="this.mailto">Request</a>
   </div>
 </template>
 
@@ -37,7 +37,7 @@ export default {
       const address = 'memoryswap@gmail.com', 
         subject = `Requesting ${this.itemMeta.name}, Item #${this.index}`,
         body = 
-`Hi, my name is ${this.name || '[name]'} requesting the ${this.itemMeta.name}. I want to give this memory another life!
+`Hi, my name is ${this.name || '[name]'} requesting the ${this.itemMeta.name}. I want to give this piece of clothing another life!
 When the item is ready for pickup, please contact me at ${this.email || '[email]'}
 
 This is item #${this.index}.
