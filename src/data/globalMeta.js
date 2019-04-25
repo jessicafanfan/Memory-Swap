@@ -42,9 +42,9 @@ export default {
       // src: "https://source.unsplash.com/random/200x300",
     },
     {
-      name: "Yellow T-Shirt",
+      name: "Mangrove shirt",
       memory:
-        "This was my free dorm room shirt. I remember that day was blazingly hot but I was excited at my new college adventure.",
+        "I wore this shirt when I went kayaking in a Mangrove forest in Bintan. It was strangely exciting.",
       // src: "https://source.unsplash.com/random/200x300",
     },
     {
